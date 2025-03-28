@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import demoReducer from "@/lib/features/demo/demo-slice";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      demoState: demoReducer,
+    },
   });
 };
 
