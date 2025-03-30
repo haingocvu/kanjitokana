@@ -1,7 +1,7 @@
 "use client";
 import { Flex, Input, Text, VStack } from "@chakra-ui/react";
 import { ChangeEventHandler, FunctionComponent, useState } from "react";
-import { toKana } from "wanakana";
+import { toKatakana } from "wanakana";
 
 const DemoKanjiToKana: FunctionComponent = () => {
   const [enteredText, setEnteredText] = useState("");
@@ -27,7 +27,7 @@ const DemoKanjiToKana: FunctionComponent = () => {
       />
       <VStack w="50%" alignItems="start" mt="2rem">
         <Text>Converted Kana Below</Text>
-        <Text w="50%">{toKana(enteredText)}</Text>
+        <Text w="50%">{toKatakana(enteredText, {})}</Text>
       </VStack>
     </Flex>
   );
