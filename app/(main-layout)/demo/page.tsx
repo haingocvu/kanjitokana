@@ -4,7 +4,8 @@ import { FunctionComponent } from "react";
 import { useKana } from "react-use-kana";
 
 const DemoKanjiToKana: FunctionComponent = () => {
-  const { kana, setKanaSource } = useKana();
+  const { kana, setKanaSource } = useKana({ kanaType: "katakana" });
+  console.log("kana", kana);
   return (
     <Flex
       flexDir="column"
